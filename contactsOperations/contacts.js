@@ -19,6 +19,10 @@ function getContactById(contactId) {
         const result = JSON.parse(contactsList);
         const findContact = result.find(item => item.id === contactId);
         console.log(findContact)
+
+        if (!findContact) {
+            console.log(`this id doesn't exist`)
+        }
     };
 
     fetchbyId(contactId);
