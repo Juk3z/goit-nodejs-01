@@ -17,7 +17,7 @@ function getContactById(contactId) {
     async function fetchbyId(contactId) {
         const contactsList = await fs.readFile(contactsPath, 'utf-8');
         const result = JSON.parse(contactsList);
-        const findContact = result.find(item => item.id = contactId);
+        const findContact = result.find(item => item.id === contactId);
         console.log(findContact)
     };
 
